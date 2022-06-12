@@ -99,7 +99,7 @@ namespace WebApiAutores.Controllers
 
             if(!exist)
             {
-                return NotFound("El autor no coincide con el id solicitado");
+                return NotFound("El autor no coincide con el id solicitado.");
             }
             context.Remove(new Autor() { Id=id});
             await context.SaveChangesAsync();
